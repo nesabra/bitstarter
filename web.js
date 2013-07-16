@@ -7,9 +7,9 @@ var fs = require('fs');
   response.send('Hello World 2!');
 });*/
 
-var indexFile = fs.readFileSync("index.html");
+var indexFile = fs.readFileSync('index.html');
 
-console.log(indexFile.toString("utf-8", 0, 27));
+console.log(indexFile.toString('utf-8', 0, 27));
 //process.stdout.write(indexFile.toString("utf-8", 0,27));
 
 /*var port = process.env.PORT || 5000;
