@@ -3,14 +3,14 @@ var fs = require('fs');
 
 var app = express.createServer(express.logger());
 
-//var indexFile = fs.readFileSync('index.html');
+var indexFile = fs.readFileSync('index.html');
 
-app.set('views', __dirname + '/views');
-app.engine('html', require('ejs').renderFile);
+//app.set('views', __dirname + '/views');
+//app.engine('html', require('ejs').renderFile);
 
 app.get('/', function(request, response) {
-//  response.send(indexFile.toString('utf-8', 0,27));
-    response.render('index.html');
+  response.send(indexFile.toString('utf-8', 0,fs.length));
+//    response.render('index.html');
 
 });
 
