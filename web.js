@@ -3,7 +3,7 @@ var fs = require('fs');
 
 var app = express.createServer(express.logger());
 
-var indexFile = fs.readFileSync('index.html');
+//var indexFile = fs.readFileSync('index.html');
 
 app.set('views', __dirname + '/views');
 app.engine('html', require('ejs').renderFile);
