@@ -7,7 +7,7 @@ var indexFile = fs.readFileSync('index.html');
 
 app.get('/', function(request, response) {
 //  response.send(indexFile.toString('utf-8', 0,27));
-  response.send(indexFile);
+    res.render('index.html');
 
 });
 
