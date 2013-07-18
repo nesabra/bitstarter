@@ -10,7 +10,7 @@ var indexFile = fs.readFileSync('index.html');
 
 app.get('/', function(request, response) {
 //  response.send(indexFile.toString('utf-8', 0,fs.length));
-  response.send(indexFile.toString('utf-8', 0,10000));
+  response.send(indexFile.toString('utf-8', 0,2485));
 //    response.render('index.html');
 
 });
