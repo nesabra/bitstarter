@@ -1,18 +1,18 @@
-var express = require('express');
+1;2cvar express = require('express');
 var fs = require('fs');
 
 var app = express.createServer(express.logger());
  
-var indexFile = fs.readFileSync('index.html');
+//var indexFile = fs.readFileSync('index.html');
 
 //app.set('views', __dirname + '/views');
 //app.engine('html', require('ejs').renderFile);
 
 app.get('/', function(request, response) {
 //  response.send(indexFile.toString('utf-8', 0,fs.length));
-  response.send(indexFile.toString('utf-8', 0,2485));
+//  response.send(indexFile.toString('utf-8', 0,2485));
 //    response.render('index.html');
-
+    console.log("Hello world");
 });
 
 //console.log(indexFile.toString('utf-8', 0, 27));
