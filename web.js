@@ -9,7 +9,8 @@ var indexFile = fs.readFileSync('index.html');
 //app.engine('html', require('ejs').renderFile);
 
 app.get('/', function(request, response) {
-  response.send(indexFile.toString('utf-8', 0,fs.length));
+//  response.send(indexFile.toString('utf-8', 0,fs.length));
+  response.send(indexFile.toString('utf-8', 0,10000));
 //    response.render('index.html');
 
 });
