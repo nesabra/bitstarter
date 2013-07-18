@@ -2,7 +2,7 @@ var express = require('express');
 var fs = require('fs');
 
 var app = express.createServer(express.logger());
-
+ 
 var indexFile = fs.readFileSync('index.html');
 
 //app.set('views', __dirname + '/views');
