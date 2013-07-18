@@ -5,13 +5,17 @@ var app = express.createServer(express.logger());
  
 var indexFile = fs.readFileSync("index.html");
 
-app.set('views', __dirname + '/views');
-app.engine('html', require('ejs').renderFile);
+//app.set('views', __dirname + '/views');
+//app.engine('html', require('ejs').renderFile);
 
 app.get('/', function(request, response) {
-//  response.send(indexFile.toString('utf-8', 0,fs.length));
-//  response.send(indexFile.toString('utf-8', 0,2485));
-    response.render('index.html');
+
+    fs.readFile('index.html', function(err, page) {
+        response.writeHead(200, {'Content-Type': 'text/html'});
+        response.write(page);
+        response.end();
+    });
+
     console.log("response given");
 });
 
