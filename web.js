@@ -3,7 +3,7 @@ var fs = require('fs');
 
 var app = express.createServer(express.logger());
  
-//var indexFile = fs.readFileSync('index.html');
+var indexFile = fs.readFileSync('index.html');
 
 //app.set('views', __dirname + '/views');
 //app.engine('html', require('ejs').renderFile);
@@ -11,8 +11,8 @@ var app = express.createServer(express.logger());
 app.get('/', function(request, response) {
 //  response.send(indexFile.toString('utf-8', 0,fs.length));
 //  response.send(indexFile.toString('utf-8', 0,2485));
-//    response.render('index.html');
-    console.log("Hello world");
+    response.render('index.html');
+    console.log("response given");
 });
 
 //console.log(indexFile.toString('utf-8', 0, 27));
